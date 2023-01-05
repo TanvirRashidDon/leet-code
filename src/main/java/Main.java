@@ -1,6 +1,4 @@
-package leetcode;
-
-import leetcode.utill.Runner;
+import utill.Runner;
 
 public class Main {
     public static void main(String[] args) throws Exception {

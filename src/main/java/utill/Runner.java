@@ -1,4 +1,4 @@
-package leetcode.utill;
+package utill;
 
 import leetcode.dataStructure.DisjointSet;
 
