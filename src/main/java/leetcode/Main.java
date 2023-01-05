@@ -1,3 +1,5 @@
+package leetcode;
+
 import leetcode.utill.Runner;
 
 public class Main {
