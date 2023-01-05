@@ -1,6 +1,5 @@
 package leetcode.concepts.graph;
 
-import java.lang.constant.Constable;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -62,7 +61,7 @@ public class BFS {
         return edges;
     }
 
-    private <T> Constable bFSByIteration(List<List<T>> edges, T source, T destination) {
+    private <T> Integer bFSByIteration(List<List<T>> edges, T source, T destination) {
         Map<T, Boolean> visited = new HashMap<>(); /* boolean[] can be used instead of map */
         Map<T, Integer> level = new HashMap<>(); /* int[] can be used instead of map */
         Queue<T> queue = new PriorityQueue<>();

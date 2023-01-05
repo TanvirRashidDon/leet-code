@@ -1,16 +1,13 @@
 package leetcode.utill;
 
-import leetcode.concepts.graph.AdjacentListForDirectedGraph;
-import leetcode.concepts.graph.BFS;
-import leetcode.concepts.graph.MSTByPrims;
-import leetcode.concepts.graph.StoringGraphInAdjacentMatrix;
 import leetcode.dataStructure.DisjointSet;
-import leetcode.dataStructure.Queues;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Runner {
     public void run() throws Exception {
@@ -32,14 +29,9 @@ public class Runner {
     private Method getRunnablePublicMethod(Object object) throws Exception {
 
         Method[] allMethods = object.getClass().getDeclaredMethods();
-        List<Method> publicMethods = new ArrayList<>();
-
-        for (Method method : allMethods) {
-            // public but not constructor
-            if (Modifier.isPublic(method.getModifiers())) {
-                publicMethods.add(method);
-            }
-        }
+        List<Method> publicMethods = Arrays.stream(allMethods)
+                .filter(method -> Modifier.isPublic(method.getModifiers())) // public but not constructor
+                .collect(Collectors.toList());
 
         if (publicMethods.size() > 1) {
             throw new Exception("multiple public method in class: " + object.getClass().getName());
