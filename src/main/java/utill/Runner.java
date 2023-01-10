@@ -1,5 +1,6 @@
 package utill;
 
+import design.pattern.mapper.MapperConsumer;
 import leetcode.dataStructure.DisjointSet;
 
 import java.lang.reflect.Method;
